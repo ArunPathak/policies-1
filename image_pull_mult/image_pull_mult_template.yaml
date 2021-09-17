@@ -16,7 +16,7 @@ spec:
   targets:
     - target: admission.k8s.gatekeeper.sh
       rego: |
-        package k8srequiredregistry
+        package k8srequiredregistrymult
         violation[{"msg": msg, "details": {"Registry should be": required}}] {
           input.review.object.kind == "Pod"
           some i
